@@ -259,3 +259,9 @@ a.tile:hover { border-color: #31507f; transform: translateY(-2px); }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
 .grid-2 .card p { font-size: 1.02rem; line-height: 1.65; }
 .nav-links a[aria-current="page"]:not(.btn) { background: var(--surface-2); }
+
+/* ---- Products & Services ---- */
+.tiles-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); max-width: 760px; margin-left: auto; margin-right: auto; }
+.sub-h { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--violet); margin: 34px 0 14px; font-weight: 600; }
+.sub-h:first-of-type { margin-top: 8px; }
+.card.soon { border-style: dashed; background: rgba(14, 21, 36, 0.5); }

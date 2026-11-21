@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Squeeze – Free PDF Compressor – Uneonal Technologies</title>
+  <meta name="description" content="Squeeze makes large PDFs small. It runs entirely in your browser, so your file is never uploaded. A free tool from Uneonal Technologies.">
+  <meta name="theme-color" content="#080c14">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <meta property="og:title" content="Squeeze – Free PDF Compressor">
+  <meta property="og:description" content="Make large PDFs small. Runs in your browser, so your file is never uploaded.">
+  <meta property="og:image" content="https://www.uneonal.com/assets/img/logo-full.webp">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/squeeze/squeeze.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="Uneonal Technologies home">
+        <img src="assets/img/mark-wide.png" alt="" width="75" height="42">
+        <span class="brand-text">
+          <span class="brand-name">Uneonal <b>Technologies</b></span>
+          <span class="brand-sub">AI Courses &middot; Products &amp; Services</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html#training">Courses</a>
+        <a href="index.html#products-services" aria-current="page">Products &amp; Services</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-primary" href="index.html#training">Explore Courses <span aria-hidden="true">&rarr;</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap hero sq-hero">
+      <p class="crumbs sq-crumbs"><a href="index.html#products-services">&larr; Products &amp; Services</a></p>
+      <span class="pill">Free tool &middot; Runs in your browser</span>
+      <h1><span class="grad">Squeeze</span></h1>
+      <h2 class="tagline">The PDF compressor that never uploads your file.</h2>
+      <p class="lead">Make large PDFs small enough to email or upload. Everything happens on your own device, so your documents stay private.</p>
+    </div>
+
+    <section class="sq-tool" aria-label="PDF compressor">
+      <div class="wrap">
+        <div class="sq-card" id="sq">
+
+          <label class="sq-drop" id="drop" for="file">
+            <input class="sq-file" id="file" type="file" accept="application/pdf,.pdf">
+            <span class="sq-drop-icon" aria-hidden="true">&#128196;</span>
+            <span class="sq-drop-title" id="dropTitle">Drop a PDF here, or click to choose one</span>
+            <span class="sq-drop-sub" id="dropSub">Your file stays on this device.</span>
+          </label>
+
+          <div class="sq-opts">
+            <fieldset>
+              <legend>Compression level</legend>
+              <div class="sq-choices">
+                <label class="sq-choice"><input type="radio" name="level" value="light"><span><b>Light</b><small>Best quality, smaller saving</small></span></label>
+                <label class="sq-choice"><input type="radio" name="level" value="balanced" checked><span><b>Balanced</b><small>Good quality, big saving</small></span></label>
+                <label class="sq-choice"><input type="radio" name="level" value="strong"><span><b>Strong</b><small>Smallest file, some quality loss</small></span></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Method</legend>
+              <div class="sq-choices two">
+                <label class="sq-choice"><input type="radio" name="mode" value="keep" checked><span><b>Keep text selectable</b><small>Recommended. Shrinks the images inside your PDF. Text, links and forms are kept.</small></span></label>
+                <label class="sq-choice"><input type="radio" name="mode" value="flatten"><span><b>Smallest size</b><small>Turns each page into a compressed image. Text can no longer be selected or searched.</small></span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="sq-actions">
+            <button class="btn btn-primary" id="go" type="button" disabled>Squeeze PDF</button>
+            <button class="btn btn-ghost" id="cancel" type="button" hidden>Cancel</button>
+          </div>
+
+          <div class="sq-progress" id="prog" hidden>
+            <progress id="bar" max="100" value="0" aria-label="Compression progress"></progress>
+            <p id="status" role="status" aria-live="polite"></p>
+          </div>
+
+          <p class="sq-error" id="err" role="alert" hidden></p>
+
+          <div class="sq-result" id="result" hidden>
+            <h2 id="rTitle"></h2>
+            <div class="sq-stats">
+              <div><span class="k">Before</span><strong id="rBefore"></strong><div class="sq-meter"><span id="mBefore"></span></div></div>
+              <div><span class="k">After</span><strong id="rAfter"></strong><div class="sq-meter good"><span id="mAfter"></span></div></div>
+            </div>
+            <p class="sq-note" id="rNote"></p>
+            <a class="btn btn-primary" id="dl" hidden>Download compressed PDF</a>
+          </div>
+        </div>
+        <noscript><p class="empty">Squeeze needs JavaScript to run in your browser.</p></noscript>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="how-h">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">About this tool</p>
+          <h2 id="how-h">How Squeeze works</h2>
+        </div>
+        <div class="why">
+          <div class="tile"><span class="k">Private</span><h3>Your file stays put</h3><p>Compression runs in your browser. Your PDF is never sent to our servers or anyone else's.</p></div>
+          <div class="tile"><span class="k">Keep text</span><h3>Smarter compression</h3><p>Large photos and scans inside the PDF are re-compressed, while text, links and forms are left alone.</p></div>
+          <div class="tile"><span class="k">Smallest size</span><h3>Maximum squeeze</h3><p>Every page becomes a compressed image. It gives the smallest files, but text can no longer be selected.</p></div>
+        </div>
+        <h3 class="sq-good">Good to know</h3>
+        <ul class="sq-list">
+          <li>PDFs that are mostly text are already small, so there may be little or nothing to save.</li>
+          <li>Password-protected PDFs aren't supported. Remove the password first.</li>
+          <li>Changing a PDF breaks any digital signature it carries.</li>
+          <li>Very large files use a lot of memory. On a phone, try the Light level or a computer.</li>
+          <li>Always keep your original file. Squeeze never changes it.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>&copy; <span id="year">2026</span> Uneonal Technologies &middot; <a href="about.html">About</a></span>
+      <a href="#main">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/pdf-lib.min.js"></script>
+  <script src="assets/squeeze/core.js"></script>
+  <script src="assets/squeeze/ui.js"></script>
+</body>
+</html>

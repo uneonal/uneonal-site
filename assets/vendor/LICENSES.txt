@@ -1,0 +1,6 @@
+Third-party libraries used by the Squeeze PDF compressor. Both run entirely in the visitor's browser.
+
+pdf-lib 1.17.1          MIT License          https://github.com/Hopding/pdf-lib
+pdf.js (pdfjs-dist) 4.10.38   Apache License 2.0   https://github.com/mozilla/pdf.js
+  Copyright 2024 Mozilla Foundation. Licensed under the Apache License, Version 2.0.
+  You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
